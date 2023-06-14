@@ -1,4 +1,4 @@
-const API_KEY = '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';
+const API_KEY = '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';
 const head = document.querySelector('img');
 const intupVal = document.querySelector('input');
 const answer = document.querySelector('.answer');
@@ -24,6 +24,7 @@ async function getMessage() {
 			options
 		);
 		const data = await res.json();
+		console.log(data);
 		answer.textContent = data.choices[0].message.content;
 		head.classList.remove('shake-animation');
 	} catch (error) {
@@ -37,97 +38,3 @@ const shakeHead = () => {
 };
 
 head.addEventListener('click', shakeHead);
-
-// const { Configuration, OpenAIApi } = require('./node_modules/openai/dist/index/openai');
-// const { Configuration, OpenAIApi } = require('openai');
-
-// const { config } = require('dotenv');
-// config();
-
-// const configuration = new Configuration({
-// 	apiKey: process.env.API_KEY,
-// });
-
-// const openai = new OpenAIApi(configuration);
-
-// const main = async () => {
-// 	const question = 'What is the capital of Poland?';
-// 	const answer = await openai.createCompletion({
-// 		model: 'text-davinci-003',
-// 		prompt: question,
-// 		temperature: 0,
-// 		max_tokens: 7,
-// 	});
-// 	console.log(answer.data.choices[0].text);
-// };
-// main()
-
-// console.log('hello');
-// import readline from "readline";
-// console.log(process.env.API_KEY);
-// import { Configuration, OpenAIApi } from 'openai';
-// import { config } from 'dotenv';
-// config();
-
-// const head = document.querySelector('img');
-// const answer = document.querySelector('.answer');
-// const error = document.querySelector('.error');
-
-// const openai = new OpenAIApi(
-// 	new Configuration({
-// 		// apiKey: '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',
-// 		apiKey: process.env.API_KEY,
-// 	})
-// );
-
-// const aswerList = [
-// 	'Yes!',
-// 	'No.',
-// 	'Maybe...',
-// 	'It is hard to say.',
-// 	'Do you really want to know answer to this qunpmestion?',
-// 	'It will be better for You if You do not know the answer...',
-// ];
-
-// const shakeHead = () => {
-// 	head.classList.add('shake-animation');
-// 	setTimeout(intupCheck, 1000);
-// };
-
-// const intupCheck = () => {
-// 	if (intup.value !== '' && intup.value.slice(-1) === '?') {
-// 		giveAnswer();
-// 		error.textContent = '';
-// 	} else if (intup.value !== '' && intup.value.slice(-1) !== '?') {
-// 		error.textContent = 'Please use the question mark "?"';
-// 		answer.textContent = '';
-// 	} else {
-// 		error.textContent = 'Please type the question.';
-// 		answer.textContent = '';
-// 	}
-// 	head.classList.remove('shake-animation');
-// };
-
-// const giveAnswer = () => {
-// 	const number = Math.round(Math.random() * aswerList.length);
-// 	answer.innerHTML = `<span>Answer:</span> ${aswerList[number]}`;
-// };
-
-// const userInterface = readline.createIterface({
-// 	input: process.stdin,
-// 	output: process.stdout,
-// });
-
-// userInterface.prompt();
-// userInterface.on('line', async (input) => {
-// 	const res = await );
-
-// const intupVal = document.querySelector('input');
-// openai
-// .createChatCompletion({
-// 	model: 'gpt-3.5-turbo',
-// 	messages: [{ role: 'user', content: intupVal }],
-// })
-// .then((res) => console.log(res.data.choices[0].message.content));
-
-// head.addEventListener('click', shakeHead);
