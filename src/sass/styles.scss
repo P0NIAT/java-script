@@ -1,0 +1,130 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0 auto;
+	max-width: 1400px;
+	font-family: 'Ubuntu', sans-serif;
+	background-color: #333;
+	color: #fff;
+}
+
+.header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 4em 2em 0;
+	color: #ccb457;
+}
+
+.header h1 {
+	align-self: center;
+	font-size: 48px;
+	text-shadow: 3px 3px #111;
+}
+
+.header p {
+	margin: 20px 0 50px;
+	font-size: 20px;
+	color: #ccc198;
+	text-shadow: 2px 2px #111;
+}
+
+.projects {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin: 2em;
+	height: 100%;
+}
+
+.project {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 1em;
+	width: 325px;
+	height: 250px;
+	background-size: cover;
+	border-radius: 8px;
+}
+.project:hover {
+	transform: scale(1.1);
+}
+
+.img {
+	background-position: center;
+	background-size: cover;
+	border-radius: 15px;
+}
+
+.one {
+	background-image: url('../img/weatherapp.jpg');
+}
+.two {
+	background-image: url('../img/countdown.jpg');
+}
+.three {
+	background-image: url('../img/todolist.jpg');
+}
+.four {
+	background-image: url('../img/askeinstein.jpg');
+}
+.five {
+	background-image: url('../img/exchange.jpg');
+}
+.six {
+	background-image: url('../img/mynotes.jpg');
+}
+.seven {
+	background-image: url('../img/billsplitter.jpg');
+}
+.eight {
+	background-image: url('../img/stopwatch.jpg');
+}
+.nine {
+	background-image: url('../img/wallet.jpg');
+}
+.ten {
+	background-image: url('../img/drinksearch.jpg');
+}
+.eleven {
+	background-image: url('../img/register.jpg');
+}
+.twelve {
+	background-image: url('../img/converter.jpg');
+}
+.thirteen {
+	background-image: url('../img/passwordval.jpg');
+}
+.fourteen {
+	background-image: url('../img/pictureslider.jpg');
+}
+.fifteen {
+	background-image: url('../img/burger.jpg');
+}
+.sixteen {
+	background-image: url('../img/sizeandcolor.jpg');
+}
+.seventeen {
+	background-image: url('../img/currentday.jpg');
+}
+.eightteen {
+	background-image: url('../img/underconstruction.jpg');
+}
+
+footer {
+	height: 75px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+footer p {
+	color: #ccb457;
+	font-size: 20px;
+}
